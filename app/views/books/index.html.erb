@@ -1,5 +1,6 @@
 <h1>Your Books</h1>
+<%= link_to "Create a new book", new_book_path %><br>
 <% @books.each do |book| %>
-  <%= book.title %>
-  <%= book.comment %>
+  <%= link_to book.title, book_path(book) %>
+  <br>
 <% end %>

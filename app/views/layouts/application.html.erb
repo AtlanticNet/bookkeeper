@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
 
-<%= yield %>
+  <%= link_to "Books", books_path %>
+
+  <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  <% else %>
+    <%= link_to('Login', new_user_session_path)  %>  
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>
