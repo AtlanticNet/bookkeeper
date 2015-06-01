@@ -24,6 +24,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
+# Important Gems
+gem 'rack-mini-profiler'
+gem 'bullet', group: 'development'
+gem 'pry-rails', group: 'development'
+gem 'brakeman', group: 'development', require: false
+gem 'awesome_print'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
